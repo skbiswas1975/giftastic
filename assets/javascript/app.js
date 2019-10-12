@@ -24,7 +24,10 @@ function goGiphy() {
 		data=JSON.parse(JSON.stringify(json));
 		var output="";
 
-		document.cookie = "testing";
+		console.log(document.cookie);
+    	var myCookie = "mycookie=hellocookie";
+		document.cookie = myCookie;
+		console.log(document.cookie);
 		
 		for(var i=0; i< data.data.length; i++){
 		var gifObj=data.data[i];
