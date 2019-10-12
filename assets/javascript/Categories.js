@@ -2,10 +2,10 @@
 var topic=Array();
 
 function show(){
-topic = ['dog', 'cat', 'rabbit', 'hamster', 'skunk', 'goldfish', 'bird', 'frog'];
+topics = ['dog', 'cat', 'rabbit', 'hamster', 'skunk', 'goldfish', 'bird', 'frog'];
 var topicButtons = $('#topicButtons');
-for (var i = 0; i < topic.length; i++) {
-  topicButtons.append('<button type="submit" id="' + topic[i] + '" name="' + topic[i] + '" class="btn">' + topic[i] + '</button>');
+for (var i = 0; i < topics.length; i++) {
+  topicButtons.append('<button type="submit" id="' + topics[i] + '" name="' + topics[i] + '" class="btn">' + topics[i] + '</button>');
   }
 }
 

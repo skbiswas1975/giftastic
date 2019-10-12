@@ -1,4 +1,4 @@
-<style>
+
 * {
   box-sizing: border-box;
   padding:0;
@@ -266,6 +266,8 @@ div.imgcaption {
 	white-space: normal!Important;
 }
 
+/* giphy api styles  */
+
 .btn {
     margin: 3px! Important;
 	background-color: #4e898b! Important;
@@ -281,10 +283,10 @@ div.imgcaption {
 }
 
 div.giphyrating {
-    text-align: center;
+    text-align: left;
     background-color: #4aaaa5;
     position: relative;
-    padding: 10px;
+    padding: 0 0 10px 5px;
     color: #ffffff;
 }
 
@@ -298,8 +300,13 @@ div.giphystillContainer{
 	padding: 0px;
 }
 
+.giphyHeader{
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 /* ----------------------- */
 
 
 
-</style>
