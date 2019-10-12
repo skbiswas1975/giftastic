@@ -1,21 +1,11 @@
 
 $(document).on('click','.btn', function()
 {
-    //alert("Dynamic button action");
-//});
 
-
-//$(".btn").on('click', function(evt){
-	        //alert($(this).attr("id"));
-			var selectedid=$(this).attr("id");
-	        
-	    
+var selectedid=$(this).attr("id");    
 
 var $form=$("form"),
 	$search=$('#'+selectedid+'').text();
-	//var output=null;
-	//$giphy=$(".giphy img"),
-	//$giphyLink=$(".giphy a");
 	
 $form.on("submit", function(e) {
 	e.preventDefault();
@@ -24,24 +14,12 @@ $form.on("submit", function(e) {
 
 function goGiphy() {
 	var input=$search;
-	var api_url="https://api.giphy.com/v1/gifs/search?";
-	var apiKey="api_key=9iG24Ub5gqbw0Xyp8WKn0M3oe40pr5J9";
+	var api_url="https://api.giphy.com/v1/gifs/search?limit=10";
+	var apiKey="&api_key=9iG24Ub5gqbw0Xyp8WKn0M3oe40pr5J9";
 	var query="&q="+input;
 	
 	$.getJSON(api_url+apiKey+query, function(json){
 		data=JSON.parse(JSON.stringify(json));
-		//imgSrc=data.data.images.original.url;
-		//$giphy.fadeOut(1000);
-		/*
-		setTimeout(function(){
-			$giphy.attr("src", imgSrc);
-			$giphy.attr("href", imgSrc);
-			setTimeout(function(){
-				$giphy.addClass("gif");
-				$giphy.fadeIn(1000);
-			},800);
-		},800);
-		*/
 		var output="";
 		
 		for(var i=0; i< data.data.length; i++){
@@ -50,10 +28,12 @@ function goGiphy() {
 		gifUrl=gifObj.images.original.url;
 		gifId=gifObj.id;
 		gifRating=gifObj.rating;
+		gifTitle=gifObj.title;
+
 		
 		console.log(gifUrl)
 		//output+="<div class='col-sm-3'>Rating: "+gifRating+"</div><br/><img id='"+gifId+"' onclick='changeImage("+gifId+")' style='cursor:pointer;' class='col-sm-3' width='100px' height='150px' src='"+gifStill+"'/>";
-		output+="<div class='col-sm-3 giphyStill'><div class='giphyrating'>Rating: "+gifRating+"</div><img id='"+gifId+"' style='cursor:pointer;' class='img-responsive' style='width:225px! Important;' alt='"+gifStill+"' src='"+gifStill+"'></div>";
+		output+="<div class='col-sm-3 giphyStill'><div class='giphyrating'><span class='giphyHeader'>Title: "+gifTitle+"</span><br/><span class='giphyHeader'>Rating: "+gifRating+"</span></div><img id='"+gifId+"' style='cursor:pointer;' class='img-responsive' style='width:225px! Important;' alt='"+gifStill+"' src='"+gifStill+"'></div>";
 
 	}
 	console.log(data)
@@ -74,12 +54,12 @@ $(document).on('click','.img-responsive', function()
 	
 	$.getJSON(api_url+queryid+apiKey, function(json){
 		dataurl=JSON.parse(JSON.stringify(json));
-		console.log(dataurl)
+		//console.log(dataurl)
 		stillUrl=dataurl.data.images.original_still.url;
 		animUrl=dataurl.data.images.original.url;
 		
-		console.log($(imgId).attr("alt"));
-		console.log($(imgId).attr("src"));
+		//console.log($(imgId).attr("alt"));
+		//console.log($(imgId).attr("src"));
 		
 		if($(imgId).attr("src")==stillUrl)
 		{
@@ -89,7 +69,5 @@ $(document).on('click','.img-responsive', function()
 		{
 			$(imgId).attr("src", stillUrl);
 		}
-		
-		//console.log(this.src);
 	})
 });
