@@ -24,10 +24,10 @@ $form.on("submit", function(e) {
 
 function goGiphy() {
 	var input=$search;
-	var api_url="http://api.giphy.com/v1/gifs/search?";
+	var api_url="https://api.giphy.com/v1/gifs/search?";
 	var apiKey="api_key=9iG24Ub5gqbw0Xyp8WKn0M3oe40pr5J9";
 	var query="&q="+input;
-	//$.getJSON("http://api.giphy.com/v1/gifs/translate?api_key=9iG24Ub5gqbw0Xyp8WKn0M3oe40pr5J9&s="+input, function(json){
+	
 	$.getJSON(api_url+apiKey+query, function(json){
 		data=JSON.parse(JSON.stringify(json));
 		//imgSrc=data.data.images.original.url;
@@ -66,7 +66,7 @@ function goGiphy() {
 
 $(document).on('click','.img-responsive', function()
 {
-	var api_url="http://api.giphy.com/v1/gifs/";
+	var api_url="https://api.giphy.com/v1/gifs/";
 	var apiKey="?api_key=9iG24Ub5gqbw0Xyp8WKn0M3oe40pr5J9";
 	var queryid=this.id;
 	var imgId="#"+queryid;
@@ -92,7 +92,4 @@ $(document).on('click','.img-responsive', function()
 		
 		//console.log(this.src);
 	})
-	
-	//stillUrl=data.data.images.original_still.url;
-	//animUrl=data.data.images.original.url;
 });
