@@ -11,7 +11,8 @@ var gifStill="";
 var gifUrl="";
 var selectedid=$(this).attr("id");  
 
-console.log(document.cookie["SearchTopic"]);
+getCookie("SearchTopic");
+console.log(getCookie("SearchTopic"));
 
 if(document.cookie["SearchTopic"] !=selectedid)
 {
@@ -79,6 +80,22 @@ function setCookie(name, value, days) {
     d.setTime(d.getTime() + 24*60*60*1000*days);
     document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
 }
+
+function getCookie(cname) {
+	var name = cname + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	for(var i = 0; i <ca.length; i++) {
+	  var c = ca[i];
+	  while (c.charAt(0) == ' ') {
+		c = c.substring(1);
+	  }
+	  if (c.indexOf(name) == 0) {
+		return c.substring(name.length, c.length);
+	  }
+	}
+	return "";
+  }
 
 
 $(document).on('click','.img-responsive', function()
