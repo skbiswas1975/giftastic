@@ -60,8 +60,8 @@ $(document).on('click','.img-responsive', function()
 {
 	//var api_url="https://api.giphy.com/v1/gifs/";
 	//var apiKey="?api_key=9iG24Ub5gqbw0Xyp8WKn0M3oe40pr5J9";
-	//var queryid=this.id;
-	//var imgId="#"+queryid;
+	var queryid=this.id;
+	var imgId="#"+queryid;
 	var animGif;
 	var stillGif;
 
@@ -69,7 +69,7 @@ $(document).on('click','.img-responsive', function()
 
 		var singleData = data.data[index];
 	   
-		if(singleData.id == this.id){
+		if(singleData.id == imgId){
 			animGif=singleData.images.original.url;
 			stillGif=singleData.images.original_still.url;
 			break;
