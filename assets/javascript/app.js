@@ -23,6 +23,11 @@ if(searchTopic !=selectedid)
 	var searchTopic="";
 }
 
+else
+{
+	counter=getCookie("counter");
+}
+
 var $form=$("form");
 	//$search=$('#'+selectedid+'').text();
 	
