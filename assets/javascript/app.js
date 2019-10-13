@@ -11,10 +11,11 @@ var gifStill="";
 var gifUrl="";
 var selectedid=$(this).attr("id");  
 
-getCookie("SearchTopic");
+searchTopic=getCookie("SearchTopic");
+
 console.log(getCookie("SearchTopic"));
 
-if(document.cookie["SearchTopic"] !=selectedid)
+if(searchTopic !=selectedid)
 {
 	var counter=0; 
 	var output="";
