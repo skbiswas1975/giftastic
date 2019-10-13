@@ -33,13 +33,14 @@ function goGiphy() {
 	//var output="";
 	searchTopic=$search;
 	var input=searchTopic;
-	var api_url="https://api.giphy.com/v1/gifs/search?limit=10&offset="+counter;
+	//var api_url="https://api.giphy.com/v1/gifs/search?limit=10&offset="+counter;
+	var api_url="https://api.giphy.com/v1/gifs/search?limit=10";
 	var apiKey="&api_key=9iG24Ub5gqbw0Xyp8WKn0M3oe40pr5J9";
 	var query="&q="+input;
 
 	//counter=counter+10;
 
-	console.log(document.cookie);
+	//console.log(document.cookie);
 
 	/*var myCookie = JSON.stringify(data);
 		document.cookie = "result="+myCookie;
@@ -56,12 +57,12 @@ function goGiphy() {
 		gifRating=gifObj.rating;
 		gifTitle=gifObj.title;
 
-		console.log(gifUrl)
+		//console.log(gifUrl)
 		//output+="<div class='col-sm-3'>Rating: "+gifRating+"</div><br/><img id='"+gifId+"' onclick='changeImage("+gifId+")' style='cursor:pointer;' class='col-sm-3' width='100px' height='150px' src='"+gifStill+"'/>";
 		output+="<div class='col-sm-3 giphyStill'><div class='giphyrating'><span class='giphyHeader'>Title: "+gifTitle+"</span><br/><span class='giphyHeader'>Rating: "+gifRating+"</span></div><img id='"+gifId+"' style='cursor:pointer;' class='img-responsive' style='width:225px! Important;' alt='"+gifStill+"' src='"+gifStill+"'></div>";
 		
 	}
-	console.log(data)
+	//console.log(data)
     $("#gifhy").html(output);
 	})
 }
