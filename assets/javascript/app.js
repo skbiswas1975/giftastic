@@ -6,11 +6,12 @@ var searchTopic="";
 
 $(document).on('click','.btn', function()
 {
-
-	//if(document.cookie)
+	
 var gifStill="";
 var gifUrl="";
-var selectedid=$(this).attr("id");   
+var selectedid=$(this).attr("id");  
+
+console.log(document.cookie["SearchTopic"]);
 
 if(document.cookie["SearchTopic"] !=selectedid)
 {
@@ -100,7 +101,7 @@ $(document).on('click','.img-responsive', function()
 
 	   if($(imgId).attr("src")==stillGif)
 		{
-			alert("Please wait while image is loading!");
+			alert("Please wait while animated gif is loading!");
 			$(imgId).attr("src", animGif);
 		}
 		else
