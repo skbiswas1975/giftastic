@@ -70,10 +70,10 @@ $(document).on('click','.img-responsive', function()
 		var singleData = data.data[index];
 	   
 		if(singleData.id == this.id){
-		  animGif=data.data.images.original.url;
-		  stillGif=data.data.images.original_still.url;
-		  break;
-		}
+			animGif=singleData.images.original.url;
+			stillGif=singleData.images.original_still.url;
+			break;
+		  }
 	   }
 
 	   if($(imgId).attr("src")==stillGif)
