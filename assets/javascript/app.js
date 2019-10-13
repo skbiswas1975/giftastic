@@ -1,6 +1,6 @@
 var counter=0; 
 var output="";
-var searchTopic="";
+//var searchTopic="";
 
 
 $(document).on('click','.btn', function()
@@ -11,11 +11,11 @@ var gifUrl="";
 var selectedid=$(this).attr("id");   
 
 /*if(document.cookie["SearchTopic"] !=selectedid)
-{*/
+{
 	var counter=0; 
 	var output="";
 	var searchTopic="";
-//}
+//}*/
 
 
 
@@ -31,8 +31,11 @@ function goGiphy() {
 
 	//var counter=0; 
 	//var output="";
-	searchTopic=$search;
-	var input=searchTopic;
+	var counter=0; 
+	var output="";
+	//var searchTopic="";
+	//searchTopic=$search;
+	var input=$search;
 	//var api_url="https://api.giphy.com/v1/gifs/search?limit=10&offset="+counter;
 	var api_url="https://api.giphy.com/v1/gifs/search?limit=10";
 	var apiKey="&api_key=9iG24Ub5gqbw0Xyp8WKn0M3oe40pr5J9";
