@@ -10,6 +10,7 @@ $(document).on('click','.btn', function()
 var gifStill="";
 var gifUrl="";
 var selectedid=$(this).attr("id");  
+console.log(selectedid);
 
 searchTopic=getCookie("SearchTopic");
 
@@ -27,15 +28,17 @@ var $form=$("form");
 	
 $form.on("submit", function(e) {
 	e.preventDefault();
+	console.log(selectedid);
 	goGiphy();
 });
 
 function goGiphy() {
 
+	console.log(selectedid);
 	//var counter=0; 
 	//var output="";
 	//searchTopic=$search;
-	searchTopic=$(this).attr("id"); 
+	searchTopic=selectedid;
 	var input=searchTopic;
 	var api_url="https://api.giphy.com/v1/gifs/search?limit=10&offset="+counter;
 	var apiKey="&api_key=9iG24Ub5gqbw0Xyp8WKn0M3oe40pr5J9";
