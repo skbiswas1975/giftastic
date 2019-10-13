@@ -24,8 +24,8 @@ function goGiphy() {
 		data=JSON.parse(JSON.stringify(json));
 		var output="";
 		
-    	var myCookie = data;
-		document.cookie = myCookie;
+    	var myCookie = JSON.stringify(data);
+		document.cookie = "result="+myCookie;
 		console.log(document.cookie);
 		
 		for(var i=0; i< data.data.length; i++){
