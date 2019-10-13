@@ -23,9 +23,8 @@ function goGiphy() {
 	$.getJSON(api_url+apiKey+query, function(json){
 		data=JSON.parse(JSON.stringify(json));
 		var output="";
-
-		console.log(document.cookie);
-    	var myCookie = "mycookie=hellocookie";
+		
+    	var myCookie = "result="+data;
 		document.cookie = myCookie;
 		console.log(document.cookie);
 		
@@ -62,19 +61,20 @@ $(document).on('click','.img-responsive', function()
 	var imgId="#"+queryid;
 	var animUrl;
 
-	console.log(document.cookie);
-	/*for(var i=0; i< data.data.length; i++){
-		var gifObj=data.data[i];
-	}*/
-	
+	var resp=document.cookie;
+	console.log(resp);
+
+	for(var i=0; i< resp.length; i++){
+
+	}
+
+	/*
 	$.getJSON(api_url+queryid+apiKey, function(json){
 		dataurl=JSON.parse(JSON.stringify(json));
-		//console.log(dataurl)
+		
 		stillUrl=dataurl.data.images.original_still.url;
 		animUrl=dataurl.data.images.original.url;
 		
-		//console.log($(imgId).attr("alt"));
-		//console.log($(imgId).attr("src"));
 		
 		if($(imgId).attr("src")==stillUrl)
 		{
@@ -85,4 +85,5 @@ $(document).on('click','.img-responsive', function()
 			$(imgId).attr("src", stillUrl);
 		}
 	})
+	*/
 });
