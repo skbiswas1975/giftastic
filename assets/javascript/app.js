@@ -11,6 +11,7 @@ var gifStill="";
 var gifUrl="";
 var selectedid=$(this).attr("id");  
 console.log(selectedid);
+console.log(output);
 
 searchTopic=getCookie("SearchTopic");
 
