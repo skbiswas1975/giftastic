@@ -5,18 +5,17 @@ var searchTopic="";
 
 $(document).on('click','.btn', function()
 {
-
-	//if(document.cookie)
+	
 var gifStill="";
 var gifUrl="";
 var selectedid=$(this).attr("id");   
 
-if(document.cookie["SearchTopic"] !=selectedid)
-{
+/*if(document.cookie["SearchTopic"] !=selectedid)
+{*/
 	var counter=0; 
 	var output="";
 	var searchTopic="";
-}
+//}
 
 
 
@@ -38,7 +37,7 @@ function goGiphy() {
 	var apiKey="&api_key=9iG24Ub5gqbw0Xyp8WKn0M3oe40pr5J9";
 	var query="&q="+input;
 
-	counter=counter+10;
+	//counter=counter+10;
 
 	console.log(document.cookie);
 
