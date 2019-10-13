@@ -27,6 +27,9 @@ function goGiphy() {
     	var myCookie = JSON.stringify(data);
 		document.cookie = "result="+myCookie;
 		console.log(document.cookie);
+
+		$.cookie('user', myCookie);
+		console.log(document.cookie);
 		
 		for(var i=0; i< data.data.length; i++){
 		var gifObj=data.data[i];
