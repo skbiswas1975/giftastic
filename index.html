@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>About</title>
+  <title>Portfolio - Giftastic</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+      </script>
   <style type="text/css">
     .headerGrid{
       background-color:lavender;
@@ -16,77 +20,51 @@
   </style>
    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body onload=show()>
 
-<div class="container-fluid header">
 <div class="container">
-<div class="top">
-  <div class="row">
-    <div class="col-sm-4 col-lg-4" class="headerGrid"><div class="left">
-      <h1>Sanjib Biswas</h1>
-  	</div></div>
-    <div class="col-sm-5 col-lg-5" class="headerGrid"></div>
-    <div class="col-sm-3 col-lg-3" class="headerGrid">
-	<div class="right">
-	<div class="row content">
-    		<a class="menu" href="index.html">About</a>
-    		<a class="menu" href="portfolio.html">Portfolio</a>
-    		<a class="menu" href="contact.html">Contact</a>
-			</div>
-  	</div>
-	</div>
+<div class="jumbotron jumbo">
+  <div class="container text-center">
+    <h2>GIPHY API</h2>
   </div>
-  
-  </div> 
 </div>
-  
- <hr/>
- 
-  </div>
   
   
   <div class="container-fluid text-center main">   
-<div class="container"> 
-    <div class="col-sm-12 text-left"> 
 	
-    <div class="bodycontent">
-      <h2><span class="heading">About Me</span></h2>
-	<hr>
-  <p>
-	  <div class="col-sm-3"> 
-      <img src="assets/images/sanpic.png" class="img-responsive" style="width:100%" alt="Image">  
-    </div>
-    <div class="col-sm-9">
-      <p>Working as a Freelance Computer Programmer.</p>
-      Skills
-      Programming (20,000+ hours over 25+ years)
-      Web Design
-      Communication Skills
-      Databases (server-side)
-      Fixing your computer (sorry, I really am bad at this)
-      Mission
-      To empower people to conduct their businesses and personal lives with more efficiency, elegance, security and privacy.
-      
-      <p>Services</p>
-      I make software, websites, databases, games, etc.
-      
-      <p>Please contact me if you'd like to discuss the possibility of working together.</p>
-    </div>
-	</p>
-   </div>
-  
-    </div>
+		<div class="col-sm-12 text-left"> 
+	
+			<div class="bodycontent">
+				<h2><span class="heading">Giftastic</span></h2>
+				<hr>
+				<p>
+				
+				
+					<form class="form-inline" action="" method="post">
+					
+    
+	<div id="topicButtons">
+	</div>
+  </form><br/><br/>
+					<div class="col-sm-9 giphystillContainer" id="gifhy"></div>
+					
+					<div class="col-sm-3">
+            <input type=text  id='newTopicVal'><input class="btn" type=button value='Add an animal' onClick='add_element()';>
+					</div>
+					
+				
+				</p>
+			</div>  
+		</div>
+	
   </div>
-    </div>
 
 <footer class="container-fluid text-center footer">
-  
-	
-	
 		<div class="copyright">copyright &copy</div>
-	
-	
 </footer>
 </div>
 </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="assets/javascript/app.js"></script>
+  <script src="assets/javascript/Categories.js"></script>
 </html>
